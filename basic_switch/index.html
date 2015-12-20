@@ -128,9 +128,9 @@ body {
 	}
 
 	microgear.on('message', function(topic,data) {
-		if(data=="ON"){			/* ON  */
+		if(data=="OPEN"){		  /* ON  */
 			document.getElementById("cube-switch").className = "cube-switch active";
-		}else if(data=="OFF"){  /* OFF */
+		}else if(data=="CLOSE"){  /* OFF */
 			document.getElementById("cube-switch").className = "cube-switch";
 		}
 	});
