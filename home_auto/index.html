@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="http://getbootstrap.com/favicon.ico">
 
-    <title>Jumbotron Template for Bootstrap</title>
+    <title>Light, Air Conditioner and Security Control System Remote Control</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./src/bootstrap.min.css" rel="stylesheet">
@@ -68,12 +68,20 @@
 		gearsecret: APPSECRET
 	});
 
+	function OnPress(){
+		microgear.chat("command","1");
+	}
+	
+	function OffPress(){
+		microgear.chat("command","0");
+	}
+	
 	function switchPress(){
 		if(document.getElementById("switch_1").className == "box box_active"){
-			microgear.chat("pieplug","CLOSE");
+			microgear.chat("command","0");
 			console.log("close");
 		}else if(document.getElementById("switch_1").className == "box"){
-	    	microgear.chat("pieplug","OPEN"); 
+	    	microgear.chat("command","1"); 
 			console.log("open");
 		}
 	}
@@ -111,7 +119,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="http://getbootstrap.com/examples/jumbotron/#">Home Automation</a>
+          <a class="navbar-brand" >LIGHT, AIR CONDITIONER AND SECURITY CONTROL SYSTEM</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
 
@@ -122,9 +130,9 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1>Hello, world!</h1>
+        <h2>Light and Air Conditioner Control Center</h2>
         <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" role="button"> Switch </a></p>
+        <!-- <p><a class="btn btn-primary btn-lg" role="button"> Switch </a></p> -->
       </div>
     </div>
 
@@ -208,14 +216,12 @@
         <div class="col-md-3">
           <div class="panel panel-default text-center">
             <div class="panel-heading">
-              <h4>motion 1</h4>
+              <h4>Motion 1</h4>
             </div>
             <div class="panel-body">
               <h1> Obj. </h1>
             </div>
-            <div class="panel-footer">
-              <p><a class="btn btn-default"> Switch </a></p>
-            </div>
+			
           </div>
         </div>
         <div class="col-md-3">
@@ -226,23 +232,19 @@
             <div class="panel-body">
               <h1> Obj. </h1>
             </div>
-            <div class="panel-footer">
-              <p><a class="btn btn-default"> Switch </a></p>
-            </div>
+			
           </div>
         </div>
 		
         <div class="col-md-3">
           <div class="panel panel-default text-center">
             <div class="panel-heading">
-              <h4>Light 3</h4>
+              <h4>Motion 3</h4>
             </div>
             <div class="panel-body">
               <h1> Obj. </h1>
             </div>
-            <div class="panel-footer">
-              <p><a class="btn btn-default" > Switch </a></p>
-            </div>
+            
           </div>
         </div>
 	  </div>
@@ -252,7 +254,7 @@
 		<div class="col-md-3">
           <div class="panel panel-default text-center">
             <div class="panel-heading">
-              <h4>Light 3</h4>
+              <h4>Test 1</h4>
             </div>
             <div class="panel-body">
               <h1> Obj. </h1>
@@ -266,23 +268,41 @@
 				</span>
 			  </div>
 			  -->
-              <p><a class="btn btn-default" onclick="switchPress()"> Send MSG </a></p>
+              <p><a class="btn btn-default" onclick="OnPress()"> On </a></p>
             </div>
           </div>
         </div>
 	  
 		<div class="col-md-3">
+          <div class="panel panel-default text-center">
+            <div class="panel-heading">
+              <h4>Test 2</h4>
+            </div>
+            <div class="panel-body">
+              <h1> Obj. </h1>
+            </div>
+            <div class="panel-footer">
+              <p>
+				<a class="btn btn-default" onclick="OffPress()"> Off </a>
+				<a class="btn btn-default" onclick="OnPress()"> On </a>
+			  </p>
+            </div>
+          </div>
+        </div>
+		<!--
+		<div class="col-md-3">
          <h2>Heading</h2>
          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Switch</a></p>
 		</div>
+		-->
       </div>
 
 
       <hr>
 
       <footer>
-        <p>© 2015 Company, Inc.</p>
+        <p>© 2015 Electronics Engineering, Faculty of Engineering, Rajamagala University of Technology Lanna Chiang Mai</p>
       </footer>
     </div> <!-- /container -->
 
